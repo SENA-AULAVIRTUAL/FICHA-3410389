@@ -1,0 +1,15 @@
+{
+  "name": "FICHA 3410389 CNC SENA",
+  "short_name": "CNC 3410389",
+  "start_url": "/FICHA-3410389/",
+  "display": "standalone",
+  "background_color": "#ffffff",
+  "theme_color": "#39A900",
+  "icons": [
+    {
+      "src": "logoSena.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    }
+  ]
+}
