@@ -3,96 +3,83 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FICHA 3410389 - Producción de Componentes Mecánicos CNC</title>
+<title>FICHA 3410389 - CNC SENA</title>
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
-  body{background:#f4f6f9;color:#333}
-  header{background:#39A900;color:white;padding:25px;text-align:center}
-  header h1{font-size:28px}
-  header p{font-size:16px;margin-top:5px}
-  nav{background:#2d7a00;display:flex;justify-content:center;gap:25px;padding:14px}
-  nav a{color:white;text-decoration:none;font-weight:bold}
-  nav a:hover{color:#d6ffbf;text-decoration:underline}
-  .container{max-width:1100px;margin:20px auto;padding:20px}
-  .card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:20px}
-  .card h2{color:#2d7a00;border-left:5px solid #39A900;padding-left:10px;margin-bottom:15px}
-  .btn{display:inline-block;background:#39A900;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;margin-top:10px}
-  .btn:hover{background:#2d7a00}
-  table{width:100%;border-collapse:collapse;margin-top:10px}
-  th,td{border:1px solid #ddd;padding:10px;text-align:left}
-  th{background:#39A900;color:white}
-  footer{background:#2d7a00;color:white;text-align:center;padding:15px;margin-top:30px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{background:#f0f5ec;color:#333}
+header{background:linear-gradient(90deg,#39A900,#2d7a00);color:white;padding:20px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
+header img{height:70px;background:white;padding:8px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+header .texto{flex:1}
+header h1{font-size:30px}
+nav{background:#1e5a00;display:flex;justify-content:center;gap:20px;padding:14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold;padding:6px 12px;border-radius:20px}
+nav a:hover{background:#39A900}
+.container{max-width:1150px;margin:20px auto;padding:15px}
+.hero{background:white;border-radius:16px;padding:30px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.08);border-top:6px solid #39A900}
+.badges{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:15px}
+.badge{background:#eaffdb;color:#2d7a00;padding:8px 14px;border-radius:20px;font-weight:bold;font-size:13px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:25px}
+.card{background:white;border-radius:16px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.07);border-left:6px solid #39A900;transition:.3s}
+.card:hover{transform:translateY(-5px)}
+.card h3{color:#2d7a00;margin-bottom:10px}
+.semana{display:flex;gap:15px;align-items:center;background:#f9fff5;border:1px solid #d5f0c5;padding:12px;border-radius:12px;margin-bottom:10px}
+.semana .num{background:#39A900;color:white;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold}
+.btn{background:#39A900;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;font-size:15px}
+.btn:hover{background:#2d7a00}
+footer{background:#1e5a00;color:white;text-align:center;padding:20px;margin-top:40px}
 </style>
 </head>
 <body>
-
 <header>
-  <h1>FICHA 3410389</h1>
-  <p>Producción de Componentes Mecánicos CNC - SENA Colombo Alemán</p>
-  <p>Instructor: Omar Pardey</p>
+<img src="logo-verde.png" alt="Logo SENA Verde">
+<div class="texto">
+<h1>FICHA 3410389</h1>
+<p>Producción de Componentes Mecánicos con Máquinas CNC</p>
+<p>Centro Industrial Colombo Alemán | Instructor Omar Pardey</p>
+</div>
 </header>
-
 <nav>
-  <a href="#inicio">Inicio</a>
-  <a href="#programacion">Programación</a>
-  <a href="#horario">Horario</a>
-  <a href="#guias">Guías</a>
-  <a href="#contacto">Contacto</a>
+<a href="#inicio">🏠 Inicio</a>
+<a href="#ruta">🗺️ Ruta</a>
+<a href="#horario">⏰ Horario</a>
+<a href="#guias">📚 Guías</a>
+<a href="#evidencias">✅ Evidencias</a>
 </nav>
-
 <div class="container">
-
-  <div class="card" id="inicio">
-    <h2>Bienvenidos Aprendices</h2>
-    <p>Esta es la plataforma oficial de la Ficha 3410389. Aquí encontrarán toda la programación, guías, horarios y anuncios del programa de Producción de Componentes Mecánicos CNC.</p>
-    <a class="btn" href="https://drive.google.com" target="_blank">Ir a mi Drive de Guías</a>
-  </div>
-
-  <div class="card" id="programacion">
-    <h2>Programación Semanal</h2>
-    <table>
-      <tr><th>Semana</th><th>Tema</th><th>Actividad</th></tr>
-      <tr><td>Semana 1</td><td>Introducción CNC y Seguridad</td><td>Taller 1 - Reconocimiento de máquina</td></tr>
-      <tr><td>Semana 2</td><td>Programación G-Code Básico</td><td>Guía 2 - Códigos G y M</td></tr>
-      <tr><td>Semana 3</td><td>Operación Torno CNC</td><td>Práctica en laboratorio</td></tr>
-      <tr><td>Semana 4</td><td>Operación Fresadora CNC</td><td>Proyecto Final</td></tr>
-    </table>
-  </div>
-
-  <div class="card" id="horario">
-    <h2>Horario Ficha 3410389</h2>
-    <table>
-      <tr><th>Día</th><th>Hora</th><th>Ambiente</th></tr>
-      <tr><td>Lunes</td><td>6:00 AM - 12:00 M</td><td>Taller CNC - Colombo Alemán</td></tr>
-      <tr><td>Martes</td><td>6:00 AM - 12:00 M</td><td>Taller CNC - Colombo Alemán</td></tr>
-      <tr><td>Miércoles</td><td>6:00 AM - 12:00 M</td><td>Taller CNC - Colombo Alemán</td></tr>
-    </table>
-  </div>
-
-  <div class="card" id="guias">
-    <h2>Guías y Material de Apoyo</h2>
-    <ul>
-      <li><a href="#">Guía 1 - Introducción y Seguridad (PDF)</a></li>
-      <li><a href="#">Guía 2 - Programación G-Code (PDF)</a></li>
-      <li><a href="#">Manual de Torno CNC (PDF)</a></li>
-      <li><a href="#">Formato de Entrega de Evidencias</a></li>
-    </ul>
-  </div>
-
-  <div class="card" id="contacto">
-    <h2>Contacto Instructor</h2>
-    <p><b>Instructor:</b> Omar Pardey</p>
-    <p><b>WhatsApp:</b> Grupo oficial Ficha 3410389</p>
-    <p><b>Email:</b> SENA - Centro Colombo Alemán</p>
-    <p>Barranquilla, Atlántico</p>
-  </div>
-
+<div class="hero" id="inicio">
+<h2>¡Bienvenido a tu Taller Virtual!</h2>
+<p>Aprende paso a paso con material didáctico y práctico.</p>
+<div class="badges">
+<span class="badge">🔧 Torno CNC</span>
+<span class="badge">⚙️ Fresadora CNC</span>
+<span class="badge">💻 G-Code</span>
+<span class="badge">🛡️ Seguridad</span>
+</div>
+<a class="btn" style="margin-top:20px;font-size:18px" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 Cargar Evidencias Aquí</a>
 </div>
 
-<footer>
-  <p>SENA - Servicio Nacional de Aprendizaje | FICHA 3410389 - 2026</p>
-  <p>Desarrollado por el Instructor Omar Pardey</p>
-</footer>
+<div class="grid">
+<div class="card"><h3>📅 Programación</h3><p>Avance semanal. Semana 2 - 35% completado.</p><a class="btn" href="#ruta">Ver Ruta</a></div>
+<div class="card"><h3>⏰ Horario</h3><p><b>Lun - Vie</b><br>6:00 AM - 12:00 M<br>Taller CNC</p></div>
+<div class="card"><h3>📚 Guías SENA</h3><p>Videos y PDFs paso a paso.</p><a class="btn" href="#guias">Ver Guías</a></div>
+<div class="card" id="evidencias"><h3>✅ Entrega de Evidencias</h3><p>Sube tus trabajos directo a mi Drive oficial.</p><a class="btn" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 Subir al Drive</a></div>
+</div>
 
+<div class="card" id="ruta" style="margin-top:25px">
+<h3>🗺️ Ruta de Aprendizaje</h3>
+<div class="semana"><div class="num">1</div><div><b>Semana 1: Introducción y Seguridad</b><br>🔍 Reconocimiento | 🦺 Seguridad</div></div>
+<div class="semana"><div class="num">2</div><div><b>Semana 2: G-Code</b><br>💻 Códigos G y M | 📝 Ejercicios</div></div>
+<div class="semana"><div class="num">3</div><div><b>Semana 3: Torno CNC</b><br>🔧 Práctica real en laboratorio</div></div>
+<div class="semana"><div class="num">4</div><div><b>Semana 4: Fresadora y Proyecto Final</b><br>🏗️ Fabricación | 🏆 Entrega</div></div>
+</div>
+
+<div class="card" style="margin-top:25px;text-align:center;background:linear-gradient(90deg,#eaffdb,#ffffff)">
+<h3>¿Listo para entregar?</h3>
+<p>Un solo click y tu evidencia queda en mi Drive</p>
+<a class="btn" style="font-size:20px;padding:14px 30px;margin-top:10px" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 CARGAR EVIDENCIA AL DRIVE</a>
+</div>
+
+</div>
+<footer><p><b>SENA Colombo Alemán</b> | FICHA 3410389 | Instructor Omar Pardey - 2026</p><p style="opacity:.7;font-size:13px">Drive Oficial: drive.google.com - Ficha 3410389</p></footer>
 </body>
 </html>
