@@ -3,34 +3,98 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Plataforma FICHA 3410389 | SENA</title>
+<title>FICHA 3410389 - Producción de Componentes Mecánicos CNC</title>
 <style>
- body{font-family:'Segoe UI',Arial;background:#f0f2f5;margin:0}
- .top{background:#000;color:#fff;text-align:center;padding:6px;font-size:12px}
- .sena{background:#39a900;color:#fff;padding:25px 20px;display:flex;justify-content:space-between;align-items:center}
- .sena h1{margin:0;font-size:28px}
- .menu{background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.1);padding:15px;text-align:center;position:sticky;top:0}
- .menu a{margin:0 15px;text-decoration:none;color:#00324d;font-weight:bold}
- .hero{background:#00324d;color:#fff;padding:40px 20px;text-align:center}
- .hero h2{font-size:32px;margin:0}
- .grid{max-width:1000px;margin:-30px auto 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px}
- .box{background:#fff;border-radius:15px;padding:25px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
- .box h3{color:#39a900;margin-top:0}
- @media(max-width:700px){.grid{grid-template-columns:1fr}}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:Arial,sans-serif}
+  body{background:#f4f6f9;color:#333}
+  header{background:#39a900;color:white;padding:20px;text-align:center}
+  header h1{font-size:26px}
+  header p{font-size:16px;margin-top:5px}
+  nav{background:#00324d;display:flex;justify-content:center;gap:20px;padding:12px}
+  nav a{color:white;text-decoration:none;font-weight:bold}
+  nav a:hover{color:#39a900}
+  .container{max-width:1100px;margin:20px auto;padding:20px}
+  .card{background:white;padding:20px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,0.1);margin-bottom:20px}
+  .card h2{color:#00324d;border-left:5px solid #39a900;padding-left:10px;margin-bottom:15px}
+  .btn{display:inline-block;background:#39a900;color:white;padding:10px 18px;border-radius:8px;text-decoration:none;margin-top:10px}
+  .btn:hover{background:#2d8600}
+  table{width:100%;border-collapse:collapse;margin-top:10px}
+  th,td{border:1px solid #ddd;padding:10px;text-align:left}
+  th{background:#00324d;color:white}
+  footer{background:#00324d;color:white;text-align:center;padding:15px;margin-top:30px}
 </style>
 </head>
 <body>
-<div class="top">SERVICIO NACIONAL DE APRENDIZAJE - SENA</div>
-<div class="sena"><h1>FICHA 3410389>
-<div class="menu">
- <a href="#prog">Programación</a><a href="#hor">Horario</a><a href="#gui">Guías</a><a href="#eva">Evidencias</a>
+
+<header>
+  <h1>FICHA 3410389</h1>
+  <p>Producción de Componentes Mecánicos CNC - SENA Colombo Alemán</p>
+  <p>Instructor: Omar Pardey</p>
+</header>
+
+<nav>
+  <a href="#inicio">Inicio</a>
+  <a href="#programacion">Programación</a>
+  <a href="#horario">Horario</a>
+  <a href="#guias">Guías</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<div class="container">
+
+  <div class="card" id="inicio">
+    <h2>Bienvenidos Aprendices</h2>
+    <p>Esta es la plataforma oficial de la Ficha 3410389. Aquí encontrarán toda la programación, guías, horarios y anuncios del programa de Producción de Componentes Mecánicos CNC.</p>
+    <a class="btn" href="https://drive.google.com" target="_blank">Ir a mi Drive de Guías</a>
+  </div>
+
+  <div class="card" id="programacion">
+    <h2>Programación Semanal</h2>
+    <table>
+      <tr><th>Semana</th><th>Tema</th><th>Actividad</th></tr>
+      <tr><td>Semana 1</td><td>Introducción CNC y Seguridad</td><td>Taller 1 - Reconocimiento de máquina</td></tr>
+      <tr><td>Semana 2</td><td>Programación G-Code Básico</td><td>Guía 2 - Códigos G y M</td></tr>
+      <tr><td>Semana 3</td><td>Operación Torno CNC</td><td>Práctica en laboratorio</td></tr>
+      <tr><td>Semana 4</td><td>Operación Fresadora CNC</td><td>Proyecto Final</td></tr>
+    </table>
+    <p>Puedes editar esta tabla cada semana directamente desde GitHub.</p>
+  </div>
+
+  <div class="card" id="horario">
+    <h2>Horario Ficha 3410389</h2>
+    <table>
+      <tr><th>Día</th><th>Hora</th><th>Ambiente</th></tr>
+      <tr><td>Lunes</td><td>6:00 AM - 12:00 M</td><td>Taller CNC - Colombo Alemán</td></tr>
+      <tr><td>Martes</td><td>6:00 AM - 12:00 M</td><td>Taller CNC - Colombo Alemán</td></tr>
+      <tr><td>Miércoles</td><td>6:00 AM - 12:00 M</td><td>Taller CNC - Colombo Alemán</td></tr>
+    </table>
+  </div>
+
+  <div class="card" id="guias">
+    <h2>Guías y Material de Apoyo</h2>
+    <ul>
+      <li><a href="#">Guía 1 - Introducción y Seguridad (PDF)</a></li>
+      <li><a href="#">Guía 2 - Programación G-Code (PDF)</a></li>
+      <li><a href="#">Manual de Torno CNC (PDF)</a></li>
+      <li><a href="#">Formato de Entrega de Evidencias</a></li>
+    </ul>
+    <p><b>Tip:</b> Sube tus PDFs a tu Google Drive y pega el link aquí. Es lo más fácil desde el celular.</p>
+  </div>
+
+  <div class="card" id="contacto">
+    <h2>Contacto Instructor</h2>
+    <p><b>Instructor:</b> Omar Pardey</p>
+    <p><b>WhatsApp:</b> Grupo oficial Ficha 3410389</p>
+    <p><b>Email:</b> SENA - Centro Colombo Alemán</p>
+    <p>Barranquilla, Atlántico</p>
+  </div>
+
 </div>
-<div class="hero"><h2>Producción de Componentes Mecánicos con Máquinas CNC</h2><p>Centro Industrial Colombo Alemán - Instructor Omar Pardey</p></div>
-<div class="grid">
- <div class="box" id="prog"><h3>📅 Programación</h3><p>Aquí irá la programación semanal actualizada. Edítala fácil desde GitHub.</p></div>
- <div class="box" id="hor"><h3>⏰ Horario Oficial</h3><p>Lunes a Viernes - 11:30 AM a 6:30 PM<br>Ambiente: Aula CAd-CAM</p></div>
- <div class="box" id="gui"><h3>📚 Guías SENA</h3><p>Sube tus PDFs a Drive y pega los links aquí para tus aprendices.</p><a href="#">Ver Guías</a></div>
- <div class="box" id="eva"><h3>✅ Entrega de Evidencias</h3><p>Link directo a la carpeta de evidencias y formatos.</p><a href="#">Subir Evidencia</a></div>
-</div>
+
+<footer>
+  <p>SENA - Servicio Nacional de Aprendizaje | FICHA 3410389 - 2026</p>
+  <p>Desarrollado por el Instructor Omar Pardey</p>
+</footer>
+
 </body>
 </html>
