@@ -1,67 +1,36 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>FICHA-3410389 | SENA</title>
-    <style>
-        :root { --verde: #39A900; --verde-oscuro: #2d7a00; }
-        * { margin:0; padding:0; box-sizing:border-box; font-family: 'Segoe UI', Arial, sans-serif; }
-        body { background: #f6f6f6; }
-        header { background: white; border-bottom: 5px solid var(--verde); padding: 15px 30px; display:flex; align-items:center; justify-content:space-between; }
-        header img { height: 65px; }
-        header .titulo { text-align:right; }
-        header h1 { color: var(--verde); font-size: 1.8rem; }
-        header p { color: #555; }
-        .hero { background: var(--verde); color: white; padding: 60px 20px; text-align: center; }
-        .hero h2 { font-size: 3rem; margin-bottom:10px; }
-        .hero p { font-size: 1.3rem; opacity: 0.9; }
-        .container { max-width: 1100px; margin: -30px auto 0; padding: 20px; }
-        .cards { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; }
-        .card { background: white; border-radius: 16px; padding: 25px; box-shadow: 0 6px 18px rgba(0,0,0,0.08); border-top: 4px solid var(--verde); }
-        .card h3 { color: var(--verde); margin-bottom:10px; }
-        .btn { display:inline-block; background: var(--verde); color:white; padding:12px 22px; border-radius: 8px; text-decoration:none; font-weight:bold; margin-top:15px; }
-        .btn:hover { background: var(--verde-oscuro); }
-        footer { background: #1a1a1a; color: white; text-align:center; padding: 25px; margin-top: 40px; }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Plataforma FICHA 3410389 | SENA</title>
+<style>
+ body{font-family:'Segoe UI',Arial;background:#f0f2f5;margin:0}
+ .top{background:#000;color:#fff;text-align:center;padding:6px;font-size:12px}
+ .sena{background:#39a900;color:#fff;padding:25px 20px;display:flex;justify-content:space-between;align-items:center}
+ .sena h1{margin:0;font-size:28px}
+ .menu{background:#fff;box-shadow:0 2px 5px rgba(0,0,0,.1);padding:15px;text-align:center;position:sticky;top:0}
+ .menu a{margin:0 15px;text-decoration:none;color:#00324d;font-weight:bold}
+ .hero{background:#00324d;color:#fff;padding:40px 20px;text-align:center}
+ .hero h2{font-size:32px;margin:0}
+ .grid{max-width:1000px;margin:-30px auto 20px;display:grid;grid-template-columns:1fr 1fr;gap:20px;padding:20px}
+ .box{background:#fff;border-radius:15px;padding:25px;box-shadow:0 4px 15px rgba(0,0,0,.1)}
+ .box h3{color:#39a900;margin-top:0}
+ @media(max-width:700px){.grid{grid-template-columns:1fr}}
+</style>
 </head>
 <body>
-    <header>
-        <img src="logo-verde.png" alt="Logo SENA" style="height:65px;">
-        <div class="titulo">
-            <h1>FICHA 3410389</h1>
-            <p>Análisis y Desarrollo de Software</p>
-        </div>
-    </header>
-
-    <div class="hero">
-        <h2>Bienvenidos a la Ficha 3410389</h2>
-        <p>Formación SENA - Innovación, Tecnología y Desarrollo</p>
-    </div>
-
-    <div class="container">
-        <div class="cards">
-            <div class="card">
-                <h3>👨‍💻 Aprendices</h3>
-                <p>Conoce a los integrantes de nuestra ficha y sus proyectos.</p>
-                <a href="#" class="btn">Ver Aprendices</a>
-            </div>
-            <div class="card">
-                <h3>📚 Evidencias</h3>
-                <p>Talleres, guías y evidencias del proceso formativo.</p>
-                <a href="#" class="btn">Ver Evidencias</a>
-            </div>
-            <div class="card">
-                <h3>🚀 Proyectos</h3>
-                <p>Proyectos productivos desarrollados por la ficha 3410389.</p>
-                <a href="#" class="btn">Ver Proyectos</a>
-            </div>
-        </div>
-    </div>
-
-    <footer>
-        <p>© 2026 FICHA-3410389 - SENA | opardey1</p>
-        <p style="font-size:0.8rem; opacity:0.7; margin-top:5px;">Colores oficiales: Verde SENA #39A900</p>
-    </footer>
+<div class="top">SERVICIO NACIONAL DE APRENDIZAJE - SENA</div>
+<div class="sena"><h1>FICHA 3410389</h1><span>opardey1.github.io</span></div>
+<div class="menu">
+ <a href="#prog">Programación</a><a href="#hor">Horario</a><a href="#gui">Guías</a><a href="#eva">Evidencias</a>
+</div>
+<div class="hero"><h2>Producción de Componentes Mecánicos con Máquinas CNC</h2><p>Centro Industrial Colombo Alemán - Instructor Omar Pardey</p></div>
+<div class="grid">
+ <div class="box" id="prog"><h3>📅 Programación</h3><p>Aquí irá la programación semanal actualizada. Edítala fácil desde GitHub.</p></div>
+ <div class="box" id="hor"><h3>⏰ Horario Oficial</h3><p>Lunes a Viernes - 6:00 AM a 12:00 PM<br>Ambiente: Taller CNC</p></div>
+ <div class="box" id="gui"><h3>📚 Guías SENA</h3><p>Sube tus PDFs a Drive y pega los links aquí para tus aprendices.</p><a href="#">Ver Guías</a></div>
+ <div class="box" id="eva"><h3>✅ Entrega de Evidencias</h3><p>Link directo a la carpeta de evidencias y formatos.</p><a href="#">Subir Evidencia</a></div>
+</div>
 </body>
 </html>
