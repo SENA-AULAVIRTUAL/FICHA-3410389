@@ -8,78 +8,82 @@
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{background:#f0f5ec;color:#333}
 header{background:linear-gradient(90deg,#39A900,#2d7a00);color:white;padding:20px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap}
-header img{height:70px;background:white;padding:8px;border-radius:12px;box-shadow:0 2px 8px rgba(0,0,0,.2)}
+header img.logo{height:70px;background:white;padding:8px;border-radius:12px}
 header .texto{flex:1}
-header h1{font-size:30px}
-nav{background:#1e5a00;display:flex;justify-content:center;gap:20px;padding:14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-weight:bold;padding:6px 12px;border-radius:20px}
+nav{background:#1e5a00;display:flex;justify-content:center;gap:15px;padding:14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
+nav a{color:white;text-decoration:none;font-weight:bold;padding:6px 14px;border-radius:20px}
 nav a:hover{background:#39A900}
 .container{max-width:1150px;margin:20px auto;padding:15px}
 .hero{background:white;border-radius:16px;padding:30px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.08);border-top:6px solid #39A900}
-.badges{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:15px}
-.badge{background:#eaffdb;color:#2d7a00;padding:8px 14px;border-radius:20px;font-weight:bold;font-size:13px}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px;margin-top:25px}
-.card{background:white;border-radius:16px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.07);border-left:6px solid #39A900;transition:.3s}
-.card:hover{transform:translateY(-5px)}
-.card h3{color:#2d7a00;margin-bottom:10px}
-.semana{display:flex;gap:15px;align-items:center;background:#f9fff5;border:1px solid #d5f0c5;padding:12px;border-radius:12px;margin-bottom:10px}
-.semana .num{background:#39A900;color:white;width:38px;height:38px;border-radius:50%;display:flex;align-items:center;justify-content:center;font-weight:bold}
-.btn{background:#39A900;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;font-size:15px}
+.card{background:white;border-radius:16px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.07);border-left:6px solid #39A900;margin-top:20px}
+.card h3{color:#2d7a00;margin-bottom:12px}
+.btn{background:#39A900;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold}
 .btn:hover{background:#2d7a00}
+.horario-img{width:100%;border-radius:12px;border:2px solid #d5f0c5;box-shadow:0 4px 15px rgba(0,0,0,.1);cursor:zoom-in}
+.nota{background:#eaffdb;border-left:5px solid #39A900;padding:12px;border-radius:8px;margin-top:15px;font-size:14px}
 footer{background:#1e5a00;color:white;text-align:center;padding:20px;margin-top:40px}
 </style>
 </head>
 <body>
 <header>
-<img src="logo-verde.png" alt="Logo SENA Verde">
+<img class="logo" src="logo-verde.png" alt="Logo SENA">
 <div class="texto">
 <h1>FICHA 3410389</h1>
 <p>Producción de Componentes Mecánicos con Máquinas CNC</p>
-<p>Centro Industrial Colombo Alemán | Instructor Omar Pardey</p>
+<p>Centro Colombo Alemán | Instructor Omar Pardey</p>
 </div>
 </header>
 <nav>
 <a href="#inicio">🏠 Inicio</a>
+<a href="#horario">⏰ HORARIO</a>
 <a href="#ruta">🗺️ Ruta</a>
-<a href="#horario">⏰ Horario</a>
 <a href="#guias">📚 Guías</a>
 <a href="#evidencias">✅ Evidencias</a>
 </nav>
+
 <div class="container">
 <div class="hero" id="inicio">
 <h2>¡Bienvenido a tu Taller Virtual!</h2>
-<p>Aprende paso a paso con material didáctico y práctico.</p>
-<div class="badges">
-<span class="badge">🔧 Torno CNC</span>
-<span class="badge">⚙️ Fresadora CNC</span>
-<span class="badge">💻 G-Code</span>
-<span class="badge">🛡️ Seguridad</span>
-</div>
-<a class="btn" style="margin-top:20px;font-size:18px" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 Cargar Evidencias Aquí</a>
+<p>Consulta aquí tu horario oficial actualizado SENA.</p>
+<a class="btn" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 Cargar Evidencias al Drive</a>
 </div>
 
-<div class="grid">
-<div class="card"><h3>📅 Programación</h3><p>Avance semanal. Semana 2 - 35% completado.</p><a class="btn" href="#ruta">Ver Ruta</a></div>
-<div class="card"><h3>⏰ Horario</h3><p><b>Lun - Vie</b><br>6:00 AM - 12:00 M<br>Taller CNC</p></div>
-<div class="card"><h3>📚 Guías SENA</h3><p>Videos y PDFs paso a paso.</p><a class="btn" href="#guias">Ver Guías</a></div>
-<div class="card" id="evidencias"><h3>✅ Entrega de Evidencias</h3><p>Sube tus trabajos directo a mi Drive oficial.</p><a class="btn" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 Subir al Drive</a></div>
+<!-- CARPETA HORARIO NUEVA -->
+<div class="card" id="horario">
+<h3>⏰ HORARIO OFICIAL - FICHA 3410389</h3>
+<p><b>Trimestre:</b> 2026-IV | <b>Horas:</b> 44 | <b>Programa:</b> PCMCNC-8 OC CF ART - 3410389</p>
+
+<div style="margin-top:15px">
+<a href="horario-cnca.jpg" target="_blank">
+<img class="horario-img" src="horario-cnca.jpg" alt="Horarios Metalmecánica CNCA 3410389">
+</a>
 </div>
 
-<div class="card" id="ruta" style="margin-top:25px">
+<div class="nota">
+<b>🔍 Cómo leer tu horario:</b><br>
+🟪 <b>Morado:</b> Taller CNC - Mecanizado CNC III - 11:30 a 18:30 (Lunes a Viernes) con Instructor Omar Pardey<br>
+🟨 <b>Amarillo:</b> Jueves 6:30-11:30 - Fundamentos de Materiales de Ingeniería<br>
+🟦 <b>Azul:</b> Viernes 8:30-10:30 - Crecimiento Personal y Desarrollo Social<br>
+🟪 <b>Fucsia oscuro:</b> Viernes 6:30-8:30 - Acciones de Mejora
+</div>
+
+<p style="margin-top:15px">
+<a class="btn" href="horario-cnca.jpg" download>⬇️ Descargar Horario en HD</a>
+<a class="btn" style="background:#1e5a00;margin-left:8px" href="horario-cnca.jpg" target="_blank">🔍 Ver en Grande</a>
+</p>
+</div>
+
+<div class="card" id="ruta">
 <h3>🗺️ Ruta de Aprendizaje</h3>
-<div class="semana"><div class="num">1</div><div><b>Semana 1: Introducción y Seguridad</b><br>🔍 Reconocimiento | 🦺 Seguridad</div></div>
-<div class="semana"><div class="num">2</div><div><b>Semana 2: G-Code</b><br>💻 Códigos G y M | 📝 Ejercicios</div></div>
-<div class="semana"><div class="num">3</div><div><b>Semana 3: Torno CNC</b><br>🔧 Práctica real en laboratorio</div></div>
-<div class="semana"><div class="num">4</div><div><b>Semana 4: Fresadora y Proyecto Final</b><br>🏗️ Fabricación | 🏆 Entrega</div></div>
+<p>Semana 1: Seguridad | Semana 2: G-Code | Semana 3: Torno CNC | Semana 4: Fresadora y Proyecto</p>
 </div>
 
-<div class="card" style="margin-top:25px;text-align:center;background:linear-gradient(90deg,#eaffdb,#ffffff)">
-<h3>¿Listo para entregar?</h3>
-<p>Un solo click y tu evidencia queda en mi Drive</p>
-<a class="btn" style="font-size:20px;padding:14px 30px;margin-top:10px" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 CARGAR EVIDENCIA AL DRIVE</a>
+<div class="card" id="evidencias" style="text-align:center;background:linear-gradient(90deg,#eaffdb,#fff)">
+<h3>✅ Entrega de Evidencias</h3>
+<a class="btn" style="font-size:20px;padding:14px 30px" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 CARGAR AL DRIVE OFICIAL</a>
 </div>
 
 </div>
-<footer><p><b>SENA Colombo Alemán</b> | FICHA 3410389 | Instructor Omar Pardey - 2026</p><p style="opacity:.7;font-size:13px">Drive Oficial: drive.google.com - Ficha 3410389</p></footer>
+<footer><p>SENA Colombo Alemán | FICHA 3410389 - Horario Oficial 2026</p></footer>
 </body>
 </html>
