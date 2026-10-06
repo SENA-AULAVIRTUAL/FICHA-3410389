@@ -6,32 +6,36 @@
 <title>Instructor Omar Pardey - SENA</title>
 <link rel="icon" href="FICHA-3410389/logoSena.png">
 <meta name="theme-color" content="#39A900">
-<link rel="manifest" href="FICHA-3410389/manifest.json">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{background:#f2f2f2}
+/* PORTAL */
 #portal{min-height:100vh;background:radial-gradient(circle at top,#0a2e00,#000);display:flex;align-items:center;justify-content:center;padding:20px}
 .login-card{max-width:430px;width:100%;background:white;border-radius:22px;padding:32px;text-align:center;border-top:8px solid #39A900;box-shadow:0 25px 60px rgba(0,0,0,.6)}
 .logo-login{width:95px;margin-bottom:12px}
-.login-card h1{color:#39A900;font-size:26px;line-height:1.1}
-.login-card .sub{color:#666;font-size:14px;margin:10px 0 24px}
-.login-card input{width:100%;padding:16px;border-radius:12px;border:2px solid #ddd;font-size:22px;text-align:center;font-weight:bold;color:#1e5a00;letter-spacing:2px}
-.login-card input:focus{border-color:#39A900;outline:none;box-shadow:0 0 0 4px #eaffdb}
+.login-card h1{color:#39A900;font-size:26px}
+.login-card input{width:100%;padding:16px;border-radius:12px;border:2px solid #ddd;font-size:22px;text-align:center;font-weight:bold;color:#1e5a00;letter-spacing:2px;margin-top:16px}
 .btn-login{width:100%;background:#39A900;color:white;border:none;padding:16px;border-radius:12px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:12px}
 .tags{display:flex;gap:8px;justify-content:center;margin-top:18px;flex-wrap:wrap}
 .tag{background:#eaffdb;color:#1e5a00;padding:8px 16px;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;border:1px solid #c5e8b0}
 .error{display:none;background:#ffebeb;color:#a00;padding:12px;border-radius:10px;margin-top:14px;font-size:14px}
+/* CONTENIDO FICHA */
 #contenido-ficha{display:none}
 .header{background:white;display:flex;align-items:center;justify-content:space-between;padding:12px 22px;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:10}
 .header img{height:48px}
-.header h2{font-size:14px;color:#333;text-align:center;line-height:1.2}
-.header .volver{background:#eee;border:none;padding:8px 14px;border-radius:20px;font-weight:bold;cursor:pointer}
+.header h2{font-size:13px;color:#333;text-align:center;line-height:1.2}
+.volver{background:#eee;border:none;padding:8px 14px;border-radius:20px;font-weight:bold;cursor:pointer}
 .banner{background:linear-gradient(90deg,#39A900,#1e5a00);color:white;padding:20px;text-align:center}
-.banner h1{font-size:22px}
-.container{max-width:800px;margin:20px auto;padding:0 16px}
-.card-ficha{background:white;border-radius:16px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,.08);margin-bottom:18px}
-.card-ficha h3{color:#39A900;margin-bottom:12px;border-left:5px solid #39A900;padding-left:10px}
+.container{max-width:850px;margin:20px auto;padding:0 16px}
+.card{background:white;border-radius:16px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,.08);margin-bottom:18px}
+.card h3{color:#39A900;margin-bottom:12px;border-left:5px solid #39A900;padding-left:10px;font-size:18px}
 .horario-img{width:100%;border-radius:12px;border:2px solid #eee}
+.btn-drive{display:block;background:#1967D2;color:white;text-align:center;padding:14px;border-radius:10px;text-decoration:none;font-weight:bold;margin-top:10px}
+.btn-drive:hover{background:#0f4ca0}
+.grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:12px}
+.grid-item{background:#f8fff2;border:2px solid #e0f5d0;border-radius:12px;padding:14px;text-align:center}
+.grid-item span{font-size:28px}
+.grid-item p{font-size:13px;font-weight:bold;color:#333;margin-top:6px}
 .btn-app{background:#000;color:white;width:100%;padding:16px;border-radius:12px;font-size:16px;font-weight:bold;border:none;cursor:pointer;margin-top:12px}
 .qr-box{text-align:center;background:#eaffdb;padding:16px;border-radius:12px;margin-top:12px}
 .qr-box img{width:180px;border-radius:8px;background:white;padding:8px}
@@ -39,11 +43,12 @@ body{background:#f2f2f2}
 </head>
 <body>
 
+<!-- PORTAL GENERAL -->
 <div id="portal">
   <div class="login-card">
     <img class="logo-login" src="FICHA-3410389/logoSena.png" alt="SENA">
-    <h1>INSTRUCTOR<br>OMAR PARDEY</h1>
-    <p class="sub">Centro Colombo Alemán<br><b>Portal Oficial de Fichas CNC</b></p>
+    <h1>INSTRUCTOR OMAR PARDEY</h1>
+    <p style="color:#666;font-size:14px;margin:10px 0">Portal Oficial Fichas CNC<br><b>Centro Colombo Alemán</b></p>
     <input id="ficha" type="number" placeholder="EJ: 3410389" inputmode="numeric">
     <button class="btn-login" onclick="ingresar()">ENTRAR A MI FICHA ➔</button>
     <div id="error" class="error">❌ Ficha no encontrada</div>
@@ -51,39 +56,73 @@ body{background:#f2f2f2}
       <span class="tag" onclick="poner('3410389')">FICHA 3410389</span>
       <span class="tag" onclick="poner('3410098')">FICHA 3410098</span>
     </div>
-    <p style="font-size:11px;color:#999;margin-top:16px">Toca tu ficha o escribe tu número</p>
   </div>
 </div>
 
+<!-- CONTENIDO COMPLETO FICHA 3410389 -->
 <div id="contenido-ficha">
   <div class="header">
     <img src="FICHA-3410389/logoSena.png" alt="SENA">
     <h2>FICHA <span id="numFicha">3410389</span><br>Componentes Mecánicos CNC</h2>
     <button class="volver" onclick="volver()">← Salir</button>
   </div>
+
   <div class="banner">
     <h1 id="tituloBanner">TALLER VIRTUAL - FICHA 3410389</h1>
-    <p>Instructor Omar Pardey - Colombo Alemán</p>
+    <p>Instructor Omar Pardey | SENA Colombo Alemán</p>
   </div>
+
   <div class="container">
-    <div class="card-ficha">
+    
+    <!-- CARPETA HORARIO -->
+    <div class="card">
       <h3>📅 HORARIO OFICIAL DE TALLER</h3>
-      <img class="horario-img" src="FICHA-3410389/horario-cnca.jpg" alt="Horario">
+      <img class="horario-img" src="FICHA-3410389/horario-cnca.jpg" alt="Horario Oficial">
+      <p style="font-size:12px;color:#888;text-align:center;margin-top:8px">Toca la imagen para ampliar</p>
     </div>
-    <div class="card-ficha">
-      <h3>📲 INSTALA LA APP EN TU CELULAR</h3>
+
+    <!-- CARPETA EVIDENCIAS DRIVE -->
+    <div class="card">
+      <h3>📁 CARPETA DE EVIDENCIAS - GOOGLE DRIVE</h3>
+      <p style="font-size:14px;color:#555">Aquí suben todas sus evidencias de taller, guías resueltas y fotos de piezas.</p>
+      
+      <!-- CAMBIA ESTE LINK POR EL DE TU DRIVE REAL -->
+      <a class="btn-drive" href="https://drive.google.com/drive/folders/1TU_LINK_DE_DRIVE_AQUI" target="_blank">
+        ☁️ ABRIR CARPETA DE EVIDENCIAS EN DRIVE
+      </a>
+      
+      <div class="grid">
+        <div class="grid-item"><span>📸</span><p>Fotos de Piezas</p></div>
+        <div class="grid-item"><span>📄</span><p>Guías Resueltas</p></div>
+        <div class="grid-item"><span>🎥</span><p>Videos CNC</p></div>
+        <div class="grid-item"><span>📊</span><p>Informes</p></div>
+      </div>
+      <p style="font-size:11px;color:#999;margin-top:12px">⚠️ Importante: Entra con tu correo @soy.sena.edu.co</p>
+    </div>
+
+    <!-- CARPETA GUIAS -->
+    <div class="card">
+      <h3>📚 GUÍAS Y MATERIAL DE APOYO</h3>
+      <a class="btn-drive" style="background:#39A900" href="#" target="_blank">📘 DESCARGAR GUÍA 1 - SEGURIDAD EN TORNO</a>
+      <a class="btn-drive" style="background:#39A900;margin-top:8px" href="#" target="_blank">📘 DESCARGAR GUÍA 2 - PROGRAMACIÓN CNC</a>
+    </div>
+
+    <!-- INSTALAR APP -->
+    <div class="card">
+      <h3>📲 INSTALA LA APP SENA</h3>
       <button class="btn-app" id="btnInstalar">📲 INSTALAR APP SENA EN MI CELULAR</button>
       <div class="qr-box">
-        <p style="font-size:13px;font-weight:bold;color:#1e5a00;margin-bottom:8px">Escanea el QR para compartir</p>
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://opardey1.github.io/&color=1e5a00" alt="QR">
+        <p style="font-size:13px;font-weight:bold;color:#1e5a00;margin-bottom:8px">Comparte con tus compañeros escaneando el QR</p>
+        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://opardey1.github.io/" alt="QR">
         <p style="font-size:11px;color:#666;margin-top:6px">opardey1.github.io</p>
       </div>
     </div>
+
   </div>
 </div>
 
 <script>
-const fichasValidas = ["3410389","3410098"];
+const fichasValidas=["3410389","3410098"];
 function poner(num){document.getElementById('ficha').value=num; ingresar();}
 function ingresar(){
   const f=document.getElementById('ficha').value.trim();
@@ -102,8 +141,8 @@ function volver(){document.getElementById('contenido-ficha').style.display='none
 document.getElementById('ficha').addEventListener('keypress',e=>{if(e.key==='Enter') ingresar();});
 let deferredPrompt;
 const btnInstalar=document.getElementById('btnInstalar');
-window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault(); deferredPrompt=e; btnInstalar.style.background="#39A900"; btnInstalar.innerText="✅ ¡CLIC AQUÍ PARA INSTALAR APP SENA!";});
-btnInstalar.addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null;}else{alert("Para instalar:\n\niPhone: Compartir (cuadro con flecha) → Agregar a pantalla de inicio\n\nAndroid: Menú (3 puntitos) → Instalar App");}});
+window.addEventListener('beforeinstallprompt',(e)=>{e.preventDefault(); deferredPrompt=e; btnInstalar.style.background="#39A900"; btnInstalar.innerText="✅ ¡CLIC AQUÍ PARA INSTALAR!";});
+btnInstalar.addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null;}else{alert("Para instalar:\niPhone: Botón Compartir → Agregar a pantalla de inicio\nAndroid: 3 puntitos → Instalar App");}});
 </script>
 </body>
 </html>
