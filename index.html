@@ -3,129 +3,79 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Instructor Omar Pardey - SENA</title>
+<title>Portal SENA - Instructor Omar Pardey</title>
 <link rel="icon" href="FICHA-3410389/logoSena.png">
 <meta name="theme-color" content="#39A900">
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#f2f2f2}
-#portal{min-height:100vh;background:radial-gradient(circle at top,#0a2e00,#000);display:flex;align-items:center;justify-content:center;padding:20px}
-.card-login{max-width:440px;width:100%;background:white;border-radius:24px;padding:34px;text-align:center;border-top:8px solid #39A900;box-shadow:0 25px 60px rgba(0,0,0,.7)}
-.logo{width:120px;margin-bottom:10px}
-.card-login h1{color:#39A900;font-size:26px}
-.sub{color:#666;font-size:14px;margin:10px 0 20px}
-input{width:100%;padding:16px;border-radius:12px;border:2px solid #ddd;font-size:22px;text-align:center;font-weight:bold;color:#1e5a00;letter-spacing:2px}
-.btn{width:100%;background:#39A900;color:white;border:none;padding:16px;border-radius:12px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:12px}
-.tags{display:flex;gap:8px;justify-content:center;margin-top:18px;flex-wrap:wrap}
-.tag{background:#eaffdb;color:#1e5a00;padding:9px 16px;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer;border:1px solid #c5e8b0}
-.error{display:none;background:#ffebeb;color:#a00;padding:12px;border-radius:10px;margin-top:14px;font-size:14px}
-#contenido{display:none}
-.header{background:white;display:flex;align-items:center;justify-content:space-between;padding:12px 22px;box-shadow:0 2px 10px rgba(0,0,0,.1);position:sticky;top:0;z-index:10}
-.header img{height:48px}
-.header h2{font-size:13px;color:#333;text-align:center}
-.volver{background:#eee;border:none;padding:8px 14px;border-radius:20px;font-weight:bold;cursor:pointer}
-.banner{background:linear-gradient(90deg,#39A900,#1e5a00);color:white;padding:20px;text-align:center}
-.container{max-width:850px;margin:20px auto;padding:0 16px}
-.card{background:white;border-radius:16px;padding:20px;box-shadow:0 4px 15px rgba(0,0,0,.08);margin-bottom:18px}
-.card h3{color:#39A900;margin-bottom:12px;border-left:5px solid #39A900;padding-left:10px}
-.horario-img{width:100%;border-radius:12px;border:2px solid #eee}
-.btn-drive{display:block;background:#1967D2;color:white;text-align:center;padding:16px;border-radius:12px;text-decoration:none;font-weight:bold;margin-top:10px;font-size:16px}
-.btn-app{background:#000;color:white;width:100%;padding:16px;border-radius:12px;font-size:16px;font-weight:bold;border:none;cursor:pointer;margin-top:12px}
-.qr-box{text-align:center;background:#eaffdb;padding:16px;border-radius:12px;margin-top:12px}
-.qr-box img{width:180px;border-radius:8px;background:white;padding:8px}
+  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+  body{min-height:100vh;background:radial-gradient(circle at top,#0a2e00,#000000);display:flex;align-items:center;justify-content:center;padding:20px}
+ .portal{max-width:420px;width:100%;background:#ffffff;border-radius:26px;padding:36px 28px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.7);border-top:8px solid #39A900}
+ .logo-sena{width:130px;height:auto;margin-bottom:14px}
+  h1{color:#39A900;font-size:26px;line-height:1.1;font-weight:900}
+  p.sub{color:#666;font-size:14px;margin:12px 0 24px;line-height:1.4}
+  input{width:100%;padding:18px;border-radius:14px;border:2px solid #ddd;font-size:26px;text-align:center;font-weight:900;letter-spacing:3px;color:#1e5a00}
+  input:focus{border-color:#39A900;outline:none;box-shadow:0 0 0 5px #eaffdb}
+ .btn{width:100%;background:#39A900;color:#fff;border:none;padding:18px;border-radius:14px;font-size:18px;font-weight:900;cursor:pointer;margin-top:14px;transition:.2s}
+ .btn:hover{background:#2a7e00;transform:scale(1.02)}
+ .fichas{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
+ .ficha-btn{background:#eaffdb;color:#1e5a00;padding:10px 18px;border-radius:30px;font-size:13px;font-weight:800;cursor:pointer;border:1px solid #bde8a0}
+ .ficha-btn:hover{background:#39A900;color:#fff}
+ .error{display:none;margin-top:16px;background:#ffebeb;color:#b10000;padding:12px;border-radius:10px;font-size:14px;font-weight:700}
+ .footer{margin-top:24px;border-top:1px solid #eee;padding-top:14px}
+ .footer img{width:55px;opacity:.9}
+ .footer p{font-size:10px;color:#aaa;margin-top:6px}
 </style>
 </head>
 <body>
 
-<div id="portal">
-  <div class="card-login">
-    <img class="logo" src="FICHA-3410389/logoSena.png" alt="SENA">
-    <h1>INSTRUCTOR<br>OMAR PARDEY</h1>
-    <p class="sub">Centro Colombo Alemán<br><b>Portal Oficial de Fichas CNC</b></p>
-    <input id="fichaInput" type="number" placeholder="EJ: 3410389" inputmode="numeric">
-    <button class="btn" onclick="ingresar()">ENTRAR A MI FICHA ➔</button>
-    <div id="error" class="error">❌ Ficha no encontrada</div>
-    <div class="tags">
-      <span class="tag" onclick="poner('3410389')">FICHA 3410389</span>
-      <span class="tag" onclick="poner('3410098')">FICHA 3410098</span>
-    </div>
-    <p style="font-size:10px;color:#aaa;margin-top:16px">SENA 2026 | Colombo Alemán</p>
-  </div>
-</div>
+<div class="portal">
+  <img class="logo-sena" src="FICHA-3410389/logoSena.png" alt="Logo SENA">
+  <h1>INSTRUCTOR<br>OMAR PARDEY</h1>
+  <p class="sub">Centro Colombo Alemán<br><b>Portal Oficial Fichas CNC</b><br>Producción de Componentes Mecánicos</p>
 
-<div id="contenido">
-  <div class="header">
+  <input id="ficha" type="number" placeholder="3410389" inputmode="numeric">
+  <button class="btn" onclick="entrar()">ENTRAR ➔</button>
+
+  <div id="error" class="error">❌ Ficha no encontrada</div>
+
+  <div class="fichas">
+    <div class="ficha-btn" onclick="poner('3410389')">FICHA 3410389</div>
+    <div class="ficha-btn" onclick="poner('3410098')">FICHA 3410098</div>
+  </div>
+
+  <div class="footer">
     <img src="FICHA-3410389/logoSena.png" alt="SENA">
-    <h2>FICHA <span id="numFicha">3410389</span><br><span id="nombreFicha">Componentes Mecánicos</span></h2>
-    <button class="volver" onclick="volver()">← Salir</button>
-  </div>
-  <div class="banner">
-    <h1 id="bannerTitulo">TALLER VIRTUAL - FICHA 3410389</h1>
-    <p>Instructor Omar Pardey - Colombo Alemán</p>
-  </div>
-  <div class="container">
-    <div class="card">
-      <h3>📅 HORARIO OFICIAL DE TALLER</h3>
-      <img id="imgHorario" class="horario-img" src="FICHA-3410389/horario-cnca.jpg" alt="Horario">
-    </div>
-    <div class="card">
-      <h3>📁 CARPETA DE EVIDENCIAS - GOOGLE DRIVE</h3>
-      <p id="descDrive" style="font-size:14px;color:#555;margin-bottom:10px">Sube aquí todas tus evidencias.</p>
-      <a id="linkDrive" class="btn-drive" href="#" target="_blank">☁️ ABRIR CARPETA DE EVIDENCIAS</a>
-    </div>
-    <div class="card">
-      <h3>📲 INSTALA LA APP SENA</h3>
-      <button class="btn-app" id="btnInstalar">📲 INSTALAR APP SENA EN MI CELULAR</button>
-      <div class="qr-box">
-        <img src="https://api.qrserver.com/v1/create-qr-code/?size=300x300&data=https://opardey1.github.io/" alt="QR">
-        <p style="font-size:11px;color:#666;margin-top:6px">opardey1.github.io</p>
-      </div>
-    </div>
+    <p>SENA - Servicio Nacional de Aprendizaje<br>2026 | Barranquilla - Colombo Alemán</p>
   </div>
 </div>
 
 <script>
-const baseDatosFichas = {
-  "3410389": {
-    nombre: "Componentes Mecánicos CNC - 3410389",
-    horario: "FICHA-3410389/horario-cnca.jpg",
-    drive: "https://drive.google.com/drive/folders/1VVz5zC3FBZ10mvLKm5kHSH7raOyWb2jS",
-    descripcion: "FICHA 3410389 - Carpeta oficial de evidencias. Sube tus fotos, guías y videos con tu correo @soy.sena.edu.co"
-  },
-  "3410098": {
-    nombre: "Mecanizado CNC - 3410098",
-    horario: "FICHA-3410098/horario.jpg",
-    drive: "https://drive.google.com/drive/folders/1PLEPTaiY1ipjDWAYx3yvAqENBd5QMfAk",
-    descripcion: "FICHA 3410098 - Carpeta oficial de evidencias. Sube tus fotos, guías y videos con tu correo @soy.sena.edu.co"
-  }
-};
+  // AQUI CONFIGURAS A DONDE VA CADA FICHA
+  const rutas = {
+    "3410389": "FICHA-3410389/",
+    "3410098": "FICHA-3410098/"
+  };
 
-function poner(num){document.getElementById('fichaInput').value=num; ingresar();}
-function ingresar(){
-  const f=document.getElementById('fichaInput').value.trim();
-  const datos=baseDatosFichas[f];
-  if(datos){
-    document.getElementById('portal').style.display='none';
-    document.getElementById('contenido').style.display='block';
-    document.getElementById('numFicha').innerText=f;
-    document.getElementById('nombreFicha').innerText=datos.nombre;
-    document.getElementById('bannerTitulo').innerText="TALLER VIRTUAL - FICHA "+f;
-    document.getElementById('imgHorario').src=datos.horario;
-    document.getElementById('imgHorario').onerror=function(){this.src="FICHA-3410389/horario-cnca.jpg";}
-    document.getElementById('linkDrive').href=datos.drive;
-    document.getElementById('descDrive').innerText=datos.descripcion;
-    window.scrollTo(0,0);
-  }else{
-    const e=document.getElementById('error'); e.style.display='block';
-    setTimeout(()=>e.style.display='none',3000);
+  function poner(num){
+    document.getElementById('ficha').value = num;
+    entrar();
   }
-}
-function volver(){document.getElementById('contenido').style.display='none'; document.getElementById('portal').style.display='flex';}
-document.getElementById('fichaInput').addEventListener('keypress',e=>{if(e.key==='Enter') ingresar();});
-let deferredPrompt;
-const btnInstalar=document.getElementById('btnInstalar');
-window.addEventListener('beforeinstallprompt',e=>{e.preventDefault(); deferredPrompt=e; btnInstalar.style.background="#39A900"; btnInstalar.innerText="✅ ¡CLIC PARA INSTALAR!";});
-btnInstalar.addEventListener('click',async()=>{if(deferredPrompt){deferredPrompt.prompt(); await deferredPrompt.userChoice; deferredPrompt=null;}else{alert("iPhone: Compartir → Agregar a inicio\nAndroid: 3 puntos → Instalar App");}});
+
+  function entrar(){
+    const num = document.getElementById('ficha').value.trim();
+    const error = document.getElementById('error');
+    if(rutas[num]){
+      window.location.href = rutas[num];
+    }else{
+      error.style.display = 'block';
+      setTimeout(()=> error.style.display = 'none', 3000);
+    }
+  }
+
+  document.getElementById('ficha').addEventListener('keypress', function(e){
+    if(e.key === 'Enter'){ entrar(); }
+  });
 </script>
+
 </body>
 </html>
