@@ -3,123 +3,65 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>FICHA 3410389 - CNC SENA</title>
+<title>Instructor Omar Pardey - SENA</title>
 <link rel="manifest" href="manifest.json">
-<meta name="theme-color" content="#39A900">
-<link rel="icon" href="logoSena.png">
+<link rel="icon" href="FICHA-3410389/logoSena.png">
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-body{background:#f0f5ec;color:#333}
-/* HEADER BLANCO */
-header{background:white;color:#1e5a00;padding:18px 30px;display:flex;align-items:center;gap:20px;flex-wrap:wrap;box-shadow:0 2px 10px rgba(0,0,0,.08);border-bottom:4px solid #39A900}
-header img.logo{height:70px;background:transparent}
-header .texto h1{color:#39A900;font-size:28px;line-height:1}
-header .texto p{color:#2d7a00;font-size:14px}
-nav{background:#1e5a00;display:flex;justify-content:center;gap:15px;padding:14px;position:sticky;top:0;z-index:10;flex-wrap:wrap}
-nav a{color:white;text-decoration:none;font-weight:bold;padding:6px 14px;border-radius:20px}
-nav a:hover{background:#39A900}
-.container{max-width:1150px;margin:20px auto;padding:15px}
-.hero{background:white;border-radius:16px;padding:30px;text-align:center;box-shadow:0 4px 15px rgba(0,0,0,.08);border-top:6px solid #39A900}
-.card{background:white;border-radius:16px;padding:22px;box-shadow:0 4px 15px rgba(0,0,0,.07);border-left:6px solid #39A900;margin-top:20px}
-.card h3{color:#2d7a00;margin-bottom:12px}
-.btn{background:#39A900;color:white;padding:12px 20px;border-radius:8px;text-decoration:none;display:inline-block;font-weight:bold;border:none;cursor:pointer}
-.btn:hover{background:#2d7a00}
-.nota{background:#eaffdb;border-left:5px solid #39A900;padding:12px;border-radius:8px;margin-top:15px;font-size:14px}
-/* MODAL HORARIO */
-.modal{display:none;position:fixed;z-index:99;left:0;top:0;width:100%;height:100%;background:rgba(0,0,0,.85);padding:20px;overflow:auto}
-.modal-content{background:white;border-radius:12px;max-width:1100px;margin:2% auto;padding:15px;position:relative;animation:zoom .3s}
-@keyframes zoom{from{transform:scale(.8)} to{transform:scale(1)}}
-.modal img{width:100%;border-radius:8px}
-.close{position:absolute;top:10px;right:20px;font-size:35px;font-weight:bold;cursor:pointer;color:#1e5a00}
-footer{background:#1e5a00;color:white;text-align:center;padding:20px;margin-top:40px}
+body{background:radial-gradient(circle at top,#0a2e00,#000);color:white;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px}
+.card{max-width:430px;width:100%;background:white;color:#222;border-radius:22px;padding:32px;box-shadow:0 25px 60px rgba(0,0,0,.6);text-align:center;border-top:8px solid #39A900;animation:entrada.6s}
+@keyframes entrada{from{transform:translateY(30px);opacity:0} to{transform:translateY(0);opacity:1}}
+.logo{width:95px;margin-bottom:12px}
+h1{color:#39A900;font-size:26px;letter-spacing:.5px}
+.sub{color:#666;font-size:14px;margin:10px 0 24px;line-height:1.4}
+input{width:100%;padding:16px;border-radius:12px;border:2px solid #ddd;margin:10px 0;font-size:20px;text-align:center;font-weight:bold;letter-spacing:2px}
+input:focus{border-color:#39A900;outline:none;box-shadow:0 0 0 3px #eaffdb}
+.btn{width:100%;background:#39A900;color:white;border:none;padding:16px;border-radius:12px;font-size:18px;font-weight:bold;cursor:pointer;margin-top:12px;transition:.2s}
+.btn:hover{background:#2d7a00;transform:scale(1.02)}
+.fichas{display:flex;gap:8px;justify-content:center;margin-top:18px;flex-wrap:wrap}
+.tag{background:#eaffdb;color:#1e5a00;padding:7px 14px;border-radius:20px;font-size:13px;font-weight:bold;cursor:pointer}
+.tag:hover{background:#39A900;color:white}
+.error{display:none;background:#ffebeb;color:#a00;padding:12px;border-radius:10px;margin-top:14px;font-size:14px}
+.hint{font-size:12px;color:#999;margin-top:16px}
 </style>
 </head>
 <body>
-<header>
-<img class="logo" src="logoSena.png" alt="Logo SENA">
-<div class="texto">
-<h1>FICHA 3410389</h1>
-<p>Producción de Componentes Mecánicos con Máquinas CNC</p>
-<p>Centro Colombo Alemán | Instructor Omar Pardey</p>
-</div>
-</header>
-<nav>
-<a href="#inicio">🏠 Inicio</a>
-<a href="#horario">⏰ HORARIO</a>
-<a href="#ruta">🗺️ Ruta</a>
-<a href="#guias">📚 Guías</a>
-<a href="#evidencias">✅ Evidencias</a>
-</nav>
+<div class="card">
+<img class="logo" src="FICHA-3410389/logoSena.png" alt="SENA">
+<h1>INSTRUCTOR<br>OMAR PARDEY</h1>
+<p class="sub">Centro Colombo Alemán<br><b>Portal Oficial de Fichas CNC</b></p>
 
-<div class="container">
-<div class="hero" id="inicio">
-<h2>¡Bienvenido a tu Taller Virtual!</h2>
-<p>Consulta aquí tu horario oficial actualizado SENA.</p>
-<div style="margin-top:18px;display:flex;gap:10px;justify-content:center;flex-wrap:wrap">
-<a class="btn" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 Cargar Evidencias al Drive</a>
-<button id="btnInstalar" class="btn" style="display:none;background:#1e5a00">📲 Instalar App</button>
-</div>
-<p id="txtInstalar" style="font-size:13px;margin-top:14px;color:#555">💡 <b>En celular:</b> Abre en Chrome > Menú ⋮ > Instalar App o Agregar a pantalla de inicio y te queda como App del SENA</p>
+<input id="ficha" type="number" placeholder="EJ: 3410389" inputmode="numeric">
+<button class="btn" onclick="ingresar()">ENTRAR A MI FICHA ➔</button>
+
+<div id="error" class="error">❌ Esa ficha no existe. Verifica el número con tu instructor.</div>
+
+<div class="fichas">
+<span class="tag" onclick="poner('3410389')">FICHA 3410389</span>
+<span class="tag" onclick="poner('3410098')">FICHA 3410098</span>
 </div>
 
-<div class="card" id="horario">
-<h3>⏰ HORARIO OFICIAL - FICHA 3410389</h3>
-<p><b>Trimestre:</b> 2026-IV | <b>Horas:</b> 44 | <b>Programa:</b> PCMCNC-8 OC CF ART - 3410389</p>
-<div class="nota">
-<b>🔍 Contenido:</b><br>
-🟪 Taller CNC 11:30-18:30 Lunes a Viernes<br>
-🟨 Jueves 6:30-11:30 Materiales<br>
-🟦 Viernes Crecimiento Personal
+<p class="hint">💡 Toca tu ficha o escribe tu número y entra directo a tu taller virtual</p>
+<p style="font-size:10px;color:#bbb;margin-top:12px">SENA Colombo Alemán | 2026</p>
 </div>
-<p style="margin-top:20px">
-<button class="btn" onclick="document.getElementById('modalHorario').style.display='block'">👁️ Ver Horario Completo</button>
-<a class="btn" style="background:#1e5a00;margin-left:8px" href="horario-cnca.jpg" download>⬇️ Descargar</a>
-</p>
-</div>
-
-<div class="card" id="ruta">
-<h3>🗺️ Ruta de Aprendizaje</h3>
-<p>Semana 1: Seguridad | Semana 2: G-Code | Semana 3: Torno CNC | Semana 4: Fresadora y Proyecto</p>
-</div>
-
-<div class="card" id="evidencias" style="text-align:center;background:linear-gradient(90deg,#eaffdb,#fff)">
-<h3>✅ Entrega de Evidencias</h3>
-<a class="btn" style="font-size:20px;padding:14px 30px" href="https://drive.google.com/drive/folders/1Mi8jYXvkAGCPFzJXYyW2QuJriUM1A_CA?usp=drive_link" target="_blank">📤 CARGAR AL DRIVE OFICIAL</a>
-</div>
-</div>
-
-<div id="modalHorario" class="modal">
-<div class="modal-content">
-<span class="close" onclick="document.getElementById('modalHorario').style.display='none'">&times;</span>
-<h3 style="color:#2d7a00;margin-bottom:10px">Horarios Metalmecánica CNCA - Ficha 3410389</h3>
-<img src="horario-cnca.jpg" alt="Horario oficial">
-<p style="text-align:center;margin-top:12px">
-<a class="btn" href="horario-cnca.jpg" target="_blank">🔍 Abrir en HD</a>
-<a class="btn" style="background:#1e5a00;margin-left:8px" onclick="document.getElementById('modalHorario').style.display='none'">Cerrar</a>
-</p>
-</div>
-</div>
-
-<footer><p>SENA Colombo Alemán | FICHA 3410389 - Horario Oficial 2026</p></footer>
 
 <script>
-let deferredPrompt;
-const btnInstalar = document.getElementById('btnInstalar');
-window.addEventListener('beforeinstallprompt', (e) => {
-  e.preventDefault();
-  deferredPrompt = e;
-  btnInstalar.style.display = 'inline-block';
-});
-btnInstalar.addEventListener('click', async () => {
-  if(deferredPrompt){
-    deferredPrompt.prompt();
-    const {outcome} = await deferredPrompt.userChoice;
-    console.log(outcome);
-    if(outcome==='accepted'){ btnInstalar.style.display='none'; }
-    deferredPrompt=null;
+const fichas = {
+  "3410389": "FICHA-3410389/",
+  "3410098": "FICHA-3410098/"
+};
+function poner(num){ document.getElementById('ficha').value=num; ingresar(); }
+function ingresar(){
+  const f = document.getElementById('ficha').value.trim();
+  const e = document.getElementById('error');
+  if(fichas[f]){
+    window.location.href = fichas[f];
+  } else {
+    e.style.display='block';
+    setTimeout(()=>e.style.display='none',3000);
   }
-});
-window.onclick = function(e){ if(e.target.id=='modalHorario'){ e.target.style.display='none'; } }
+}
+document.getElementById('ficha').addEventListener('keypress',function(e){ if(e.key==='Enter'){ ingresar(); }});
 </script>
 </body>
 </html>
