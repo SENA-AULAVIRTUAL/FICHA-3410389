@@ -3,79 +3,60 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Portal SENA - Instructor Omar Pardey</title>
-<link rel="icon" href="FICHA-3410389/logoSena.png">
+<title>Portal SENA - Omar Pardey</title>
 <meta name="theme-color" content="#39A900">
 <style>
-  *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
-  body{min-height:100vh;background:radial-gradient(circle at top,#0a2e00,#000000);display:flex;align-items:center;justify-content:center;padding:20px}
- .portal{max-width:420px;width:100%;background:#ffffff;border-radius:26px;padding:36px 28px;text-align:center;box-shadow:0 30px 80px rgba(0,0,0,.7);border-top:8px solid #39A900}
- .logo-sena{width:130px;height:auto;margin-bottom:14px}
-  h1{color:#39A900;font-size:26px;line-height:1.1;font-weight:900}
-  p.sub{color:#666;font-size:14px;margin:12px 0 24px;line-height:1.4}
-  input{width:100%;padding:18px;border-radius:14px;border:2px solid #ddd;font-size:26px;text-align:center;font-weight:900;letter-spacing:3px;color:#1e5a00}
-  input:focus{border-color:#39A900;outline:none;box-shadow:0 0 0 5px #eaffdb}
- .btn{width:100%;background:#39A900;color:#fff;border:none;padding:18px;border-radius:14px;font-size:18px;font-weight:900;cursor:pointer;margin-top:14px;transition:.2s}
- .btn:hover{background:#2a7e00;transform:scale(1.02)}
- .fichas{display:flex;gap:10px;justify-content:center;margin-top:20px;flex-wrap:wrap}
- .ficha-btn{background:#eaffdb;color:#1e5a00;padding:10px 18px;border-radius:30px;font-size:13px;font-weight:800;cursor:pointer;border:1px solid #bde8a0}
- .ficha-btn:hover{background:#39A900;color:#fff}
- .error{display:none;margin-top:16px;background:#ffebeb;color:#b10000;padding:12px;border-radius:10px;font-size:14px;font-weight:700}
- .footer{margin-top:24px;border-top:1px solid #eee;padding-top:14px}
- .footer img{width:55px;opacity:.9}
- .footer p{font-size:10px;color:#aaa;margin-top:6px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
+body{min-height:100vh;background:radial-gradient(circle at top,#0a2e00,#000);display:flex;align-items:center;justify-content:center;padding:20px}
+.card{max-width:400px;width:100%;background:#fff;border-radius:26px;padding:32px 26px;text-align:center;border-top:8px solid #39A900;box-shadow:0 30px 70px rgba(0,0,0,.7)}
+.logo{width:110px;display:block;margin:0 auto 16px}
+h1{color:#39A900;font-size:24px;line-height:1.1;font-weight:900}
+.sub{color:#333;font-size:14px;margin:12px 0 22px;line-height:1.4}
+input{width:100%;padding:18px;border-radius:14px;border:2px solid #ddd;font-size:24px;text-align:center;font-weight:900;letter-spacing:3px;color:#1e5a00}
+input:focus{border-color:#39A900;outline:none;box-shadow:0 0 0 4px #eaffdb}
+.btn{width:100%;background:#39A900;color:#fff;border:none;padding:18px;border-radius:14px;font-size:18px;font-weight:900;cursor:pointer;margin-top:14px}
+.error{display:none;margin-top:14px;background:#ffebeb;color:#b10000;padding:12px;border-radius:10px;font-size:13px;font-weight:700}
 </style>
 </head>
 <body>
-
-<div class="portal">
-  <img class="logo-sena" src="FICHA-3410389/logoSena.png" alt="Logo SENA">
+<div class="card">
+  <img class="logo" src="https://opardey1.github.io/FICHA-3410389/logoSena.png" alt="SENA" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg'">
   <h1>INSTRUCTOR<br>OMAR PARDEY</h1>
-  <p class="sub">Centro Colombo Alemán<br><b>Portal Oficial Fichas CNC</b><br>Producción de Componentes Mecánicos</p>
-
-  <input id="ficha" type="number" placeholder="3410389" inputmode="numeric">
-  <button class="btn" onclick="entrar()">ENTRAR ➔</button>
-
-  <div id="error" class="error">❌ Ficha no encontrada</div>
-
-  <div class="fichas">
-    <div class="ficha-btn" onclick="poner('3410389')">FICHA 3410389</div>
-    <div class="ficha-btn" onclick="poner('3410098')">FICHA 3410098</div>
-  </div>
-
-  <div class="footer">
-    <img src="FICHA-3410389/logoSena.png" alt="SENA">
-    <p>SENA - Servicio Nacional de Aprendizaje<br>2026 | Barranquilla - Colombo Alemán</p>
-  </div>
+  <p class="sub">Centro Colombo Alemán<br><b>Portal Virtual</b><br>Producción de Componentes Mecánicos</p>
+  <input id="ficha" type="number" placeholder="Escribe tu ficha" inputmode="numeric">
+  <button class="btn" onclick="entrar()">ENTRAR →</button>
+  <div id="error" class="error">❌ Ficha no encontrada. Crea el archivo <span id="nombreError"></span>.html</div>
 </div>
 
 <script>
-  // AQUI CONFIGURAS A DONDE VA CADA FICHA
-  const rutas = {
-    "3410389": "FICHA-3410389/",
-    "3410098": "FICHA-3410098/"
-  };
+function entrar(){
+  const num = document.getElementById('ficha').value.trim();
+  const error = document.getElementById('error');
+  const nombreError = document.getElementById('nombreError');
+  
+  if(!num){ return; }
 
-  function poner(num){
-    document.getElementById('ficha').value = num;
-    entrar();
-  }
+  // Esta es la magia: busca un archivo que se llame igual que la ficha
+  // Si pones 3410389 -> te manda a 3410389.html
+  const archivoDestino = num + ".html";
 
-  function entrar(){
-    const num = document.getElementById('ficha').value.trim();
-    const error = document.getElementById('error');
-    if(rutas[num]){
-      window.location.href = rutas[num];
-    }else{
-      error.style.display = 'block';
-      setTimeout(()=> error.style.display = 'none', 3000);
-    }
-  }
-
-  document.getElementById('ficha').addEventListener('keypress', function(e){
-    if(e.key === 'Enter'){ entrar(); }
-  });
+  // Intenta cargar el archivo, si no existe muestra error
+  fetch(archivoDestino, {method: 'HEAD'})
+    .then(res => {
+      if(res.ok){
+        window.location.href = archivoDestino;
+      }else{
+        nombreError.innerText = num;
+        error.style.display = 'block';
+        setTimeout(()=> error.style.display='none', 4000);
+      }
+    })
+    .catch(()=>{
+      // Si falla el fetch (por GitHub), igual intenta redirigir
+      window.location.href = archivoDestino;
+    });
+}
+document.getElementById('ficha').addEventListener('keypress', e=>{if(e.key==='Enter') entrar();});
 </script>
-
 </body>
 </html>
