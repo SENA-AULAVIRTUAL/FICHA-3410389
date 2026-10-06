@@ -1,4 +1,4 @@
-# FICHA-3410389
+
 Producción de Componentes Mecánicos CNC
 SENA - Centro Colombo Alemán - Barranquilla
 
