@@ -3,14 +3,13 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>SENA VIRTUAL</title>
-<meta name="theme-color" content="#39A900">
+<title>SENA AULA VIRTUAL</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Arial,sans-serif}
 body{min-height:100vh;background:#0a2e00;display:flex;align-items:center;justify-content:center;padding:20px}
 .card{width:100%;max-width:380px;background:#fff;border-radius:28px;padding:32px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,.6);border-top:8px solid #39A900}
 .logo{width:110px;margin:0 auto 18px;display:block}
-h1{color:#39A900;font-size:28px;font-weight:900;line-height:1.1;letter-spacing:1px}
+h1{color:#39A900;font-size:26px;font-weight:900;line-height:1.1}
 .sub{margin:12px 0 24px;color:#444;font-size:14px;line-height:1.4}
 input{width:100%;padding:18px;border:2px solid #ddd;border-radius:14px;font-size:22px;font-weight:800;text-align:center;color:#0a2e00;letter-spacing:2px}
 input:focus{outline:none;border-color:#39A900;box-shadow:0 0 0 4px #eaffdb}
@@ -18,17 +17,13 @@ input:focus{outline:none;border-color:#39A900;box-shadow:0 0 0 4px #eaffdb}
 </style>
 </head>
 <body>
-
 <div class="card">
-  <img class="logo" src="https://opardey1.github.io/FICHA-3410389/logoSena.png" alt="Logo SENA" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg'">
-  
-  <h1>SENA<br>VIRTUAL</h1>
+  <img class="logo" src="https://opardey1.github.io/FICHA-3410389/logoSena.png" alt="SENA" onerror="this.src='https://upload.wikimedia.org/wikipedia/commons/8/83/Sena_Colombia_logo.svg'">
+  <h1>SENA<br>AULA VIRTUAL</h1>
   <p class="sub">Centro Colombo Alemán<br><b>Portal Virtual</b><br>Producción de Componentes Mecánicos</p>
-
   <input id="ficha" type="number" placeholder="Escribe tu ficha" inputmode="numeric">
   <button class="btn" onclick="entrar()">ENTRAR →</button>
 </div>
-
 <script>
 function entrar(){
   const num = document.getElementById('ficha').value.trim();
@@ -37,6 +32,5 @@ function entrar(){
 }
 document.getElementById('ficha').addEventListener('keypress', e => { if(e.key==='Enter') entrar(); });
 </script>
-
 </body>
 </html>
